@@ -1066,6 +1066,16 @@ class PHPMailer
     }
 
     /**
+     * Clear all SMTP recipients.
+     * 
+     * The message will instead be sent to all 'to', 'cc' and 'bcc' addresses.
+     */
+    public function clearSMTPRecipients()
+    {
+        $this->SMTPRecipientTo = null;
+    }
+
+    /**
      * Add a "CC" address.
      *
      * @param string $address The email address to send to
